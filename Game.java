@@ -17,7 +17,7 @@ class LeaderBoardEntry {
     LeaderBoardEntry(Participant p, Integer level, Integer Score){
         this.participant = p;
         this.level = level;
-        this.score = score;
+        this.score = Score;
         System.out.println("Level " + level + " score for " + p.name + " is " + Score);
     }
 }
@@ -53,7 +53,13 @@ class Game{
 
     // Write code to identify and announce winner's name and score
     private void declareWinner(){
-       
+       Stringwinner_name="";
+        Integer winnwr_score=0;
+        for(LeaderBoardEntry entry: leaderBoard.leaderBoardEntry)
+        {
+            winner_score=entry.score;
+            winner_name=entry.participant.name;
+        }
 
        System.out.println(".... and the WINNER is " + " with score " );
     }
